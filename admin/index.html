@@ -30,22 +30,35 @@
             <dd><a href="">安全设置</a></dd>
           </dl>
         </li>
-        <li class="layui-nav-item"><a href="">退了</a></li>
+        <li class="layui-nav-item" ><a href="javascript:;" id="btnLogout">退出</a></li>
       </ul>
     </div>
 
     <div class="layui-side layui-bg-black">
       <div class="layui-side-scroll">
         <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
-        <ul class="layui-nav layui-nav-tree" lay-filter="test">
-          <li class="layui-nav-item"><a href="/admin/dashboard.html" target="hmtop"><i class="layui-icon layui-icon-home"></i>首页</a></li>
-          <li class="layui-nav-item"><a href="/admin/article.html" target="hmtop"><i class="layui-icon layui-icon-list"></i>内容管理</a></li>
-          <li class="layui-nav-item"><a href=""><i class="layui-icon layui-icon-picture-fine"></i>素材管理</a></li>
-          <li class="layui-nav-item"><a href=""><i class="layui-icon layui-icon-release"></i>发布文章</a></li>
-          <li class="layui-nav-item"><a href=""><i class="layui-icon layui-icon-dialogue"></i>评论管理</a></li>
-          <li class="layui-nav-item"><a href=""><i class="layui-icon layui-icon-gift"></i>粉丝管理</a></li>
-          <li class="layui-nav-item"><a href=""><i class="layui-icon layui-icon-set"></i>个人设置</a></li>
-          <li class="layui-nav-item"><a href=""><i class="layui-icon layui-icon-app"></i>其他功能</a></li>
+        <ul class="layui-nav layui-nav-tree"  lay-filter="test">
+          <li class="layui-nav-item"><a href="">首页</a></li>
+          <li class="layui-nav-item ">
+            <a class="" href="javascript:;">内容管理</a>
+            <dl class="layui-nav-child">
+              <dd><a href="javascript:;">发布文章</a></dd>
+              <dd><a href="javascript:;">内容列表</a></dd>
+              <dd><a href="javascript:;">评论列表</a></dd>
+              <dd><a href="javascript:;">素材管理</a></dd>
+              
+            </dl>
+          </li>
+          <li class="layui-nav-item">
+            <a href="javascript:;">粉丝管理</a>
+            <dl class="layui-nav-child">
+              <dd><a href="javascript:;">图文数据</a></dd>
+              <dd><a href="javascript:;">粉丝概况</a></dd>
+              <dd><a href="">粉丝画像</a></dd>
+              <dd><a href="">粉丝列表</a></dd>
+            </dl>
+          </li>
+          <li class="layui-nav-item"><a href="">账户信息</a></li>
         </ul>
       </div>
     </div>
@@ -58,6 +71,9 @@
 
 
   <script src="/assets/layui/layui.all.js"></script>
+  <script src="../scripts/jquery/jquery.min.js"></script>
+  <script src="../scripts/index.js"></script>
+
 </body>
 
 </html>

@@ -18,4 +18,9 @@ iframe {
 
 a {
   transition: none !important;
+ 
+}
+
+.layui-nav-tree  {
+  padding: 15px;
 }
