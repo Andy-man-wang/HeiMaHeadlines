@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+  <meta charset="utf-8">
+  <title>登陆</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/styles/resetsign.css">
+  <link rel="stylesheet" href="/styles/supersized.css">
+  <link rel="stylesheet" href="/styles/style.css">
+
+</head>
+
+<body>
+
+  <div class="page-container">
+    <h1>登录</h1>
+    <form id="loginForm">
+      <input type="text" name="mobile" class="username" placeholder="请输入手机号">
+      <input type="text" name="code" class="code" placeholder="请输入验证码">
+      <button id="login">登录</button>
+      <div class="error"><span>+</span></div>
+    </form>
+    <div class="connect">
+      <p>Or connect with:</p>
+      <p>
+        <a class="facebook" href=""></a>
+        <a class="twitter" href=""></a>
+      </p>
+    </div>
+  </div>
+
+  <script src="/assets/layui/layui.all.js"></script>
+  <script src="/scripts/jquery/jquery.min.js"></script>
+  <script src="/scripts/supersized.3.2.7.min.js"></script>
+  <script src="/scripts/supersized-init.js"></script>
+  <script src="/scripts/scripts.js"></script>
+  <script>
+    $(function () {
+      var layer = layui.layer
+
+      $('#login').on('click', function (e) {
+        e.preventDefault()
+
+        $.ajax({
+          url: 'http://ttapi.research.itcast.cn/mp/v1_0/authorizations',
+          method: 'POST',
+          contentType: 'application/json',
+          data: JSON.stringify({
+            mobile: $('.username').val(),
+            code: $('.code').val()
+          }),
+          success: function (res) {
+            if (res.message !== 'OK') {
+              return layer.msg('登录失败')
+            }
+
+            localStorage.setItem('hmtoken', res.data.token)
+            location.href = '/admin/index.html'
+
+          }
+        })
+      })
+    })
+  </script>
+</body>
+
+</html>
+<script>
+</script>
