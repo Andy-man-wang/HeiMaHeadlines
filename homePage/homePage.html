@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/layui/css/layui.css">
+    <link rel="stylesheet" href="/homePage/homePage.css">
+    <title>Document</title>
+    <script src="/homePage/echarts.min.js"></script>
+</head>
+
+<body>
+    <div class="layui-col-md12">
+        <div class="layui-card">
+            <div class="layui-card-body">
+                <div class="layui-container">
+                    <div class="layui-row">
+                        <div class="layui-col-md9 w_dy">
+                            <dl>
+                                <dd class="w_dd">
+                                    <img src="/assets/backgrounds/w.jpg" alt="">
+                                </dd>
+                                <dt class="w_dt">
+                        黑马头条官方账号
+                      </dt>
+                                <dd class="w_db">视频发布</dd>
+                            </dl>
+                        </div>
+                        <div class="layui-col-md3">
+                            <div class="w_de">
+                                <div class="w_df">
+                                    <div class="w_do">222</div>
+                                    <div class="w_dq">粉丝数</div>
+                                </div>
+                                <div class="w_df">
+                                    <div class="w_do">333</div>
+                                    <div class="w_dq">累计阅读量</div>
+                                </div>
+                                <div class="w_df">
+                                    <div class="w_do">444</div>
+                                    <div class="w_dq">累计评论数</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layui-row layui-col-space5">
+            <div class="layui-col-md7">
+                <div class="layui-card">
+                    <div class="layui-card-header">最新图文
+                        <a href="javascript:;" id="w_more"> 更多</a>
+                    </div>
+                    <div class="layui-card-body">
+                        <ul class="article">
+                            <!-- <li>
+                                <img src="/assets/backgrounds/w.jpg" class="newImg">
+                                <dl>
+                                    <dt>黑马头条官方账号</dd>
+                                <dd class="time"> <span class="state" >已发表</span> 2020-9-16 </dd>
+                                <dd class="tuijian">推荐 6 阅读 29 评论 0 转发 0 收藏 6 </dd>
+                               </dl>
+                          </li> -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="layui-card">
+                    <div class="layui-card-header">动态
+                        <a href="javascript:;" id="w_more"> 更多</a>
+                    </div>
+                    <div class="layui-card-body">
+                        <ul class="article">
+                            <!-- <li>
+                            <img src="/assets/backgrounds/w.jpg" class="newImg">
+                            <dl>
+                                <dt>黑马头条官方账号</dd>
+                            <dd class="time"> <span class="state" >已发表</span> 2020-9-16 </dd>
+                            <dd class="tuijian">推荐 6 阅读 29 评论 0 转发 0 收藏 6 </dd>
+                           </dl>
+                      </li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-col-md5">
+                <div class="layui-card">
+                    <div class="layui-card-header">粉丝数据</div>
+                    <div class="layui-card-body">
+                        <!-- 调用first_page js代码di 第4行的粉丝数据 main -->
+                        <div id="main" style="width:300px; height:300px"></div>
+                        <!-- 粉丝数据 -->
+                        <div class="layui-row layui-col-space10 fans">
+                            <div class="layui-col-md4">
+                                <div class="num">
+                                    23
+                                </div>
+                                <div class="amount"><span class="layui-badge-dot layui-bg-blue"></span>新增粉丝</div>
+                            </div>
+                            <div class="layui-col-md4">
+                                <div class="num">
+                                    283
+                                </div>
+                                <div class="amount"><span class="layui-badge-dot layui-bg-orange"></span>活跃粉丝</div>
+                            </div>
+                            <div class="layui-col-md4">
+                                <div class="num">
+                                    123
+                                </div>
+                                <div class="amount"><span class="layui-badge-dot layui-bg-green"></span>总粉丝数</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-card">
+                    <div class="layui-card-header">图文数据</div>
+                    <div class="layui-card-body">
+                        <!-- 调用js图文数据列表 -->
+                        <div id="record" style="width: 300px; height:300px"></div>
+                        <!-- 粉丝数据 -->
+                        <div class="layui-row layui-col-space10 fans" id="record">
+                            <div class="layui-col-md4">
+                                <div class="num">
+                                    23
+                                </div>
+                                <div class="amount"><span class="layui-badge-dot layui-bg-blue"></span>平均阅读进度</div>
+                            </div>
+                            <div class="layui-col-md4">
+                                <div class="num">
+                                    283
+                                </div>
+                                <div class="amount"><span class="layui-badge-dot layui-bg-orange"></span>跳出率</div>
+                            </div>
+                            <div class="layui-col-md4">
+                                <div class="num">
+                                    123
+                                </div>
+                                <div class="amount"><span class="layui-badge-dot layui-bg-green"></span>平均阅读速度</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/html" id="newArt">
+            {{each data}}
+            <li class='list'>
+                <img src="/assets/backgrounds/w.jpg" class="newImg">
+                <dl>
+                    <dt>黑马头条官方账号</dt>
+                    <dd class="time"> <span class="state">已发表</span> 2020-9-16 </dd>
+                    <dd class="tuijian">推荐 6 阅读 29 评论 0 转发 0 收藏 6 </dd>
+                </dl>
+            </li>
+            {{/each}}
+        </script>
+        <script src="/assets/layui/layui.all.js"></script>
+        <script src="/scripts/jquery/jquery.js"></script>
+        <script src="/scripts/template-web.js"></script>
+        <script src="/homePage/homePage.js"></script>
+
+
+</body>
+
+</html>
