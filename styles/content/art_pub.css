@@ -1,0 +1,49 @@
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #f2f3f5;
+    padding: 15px;
+}
+
+.w {
+    width: 360px;
+}
+
+#pic {
+    position: relative;
+    padding-top: 90px;
+    border: 1px dashed #e2e2e2;
+    background-color: #fff;
+    text-align: center;
+    cursor: pointer;
+    color: #999;
+    margin-top: 30px;
+    height: 150px;
+    width: 240px;
+}
+
+
+/* #pic .layui-icon {
+    font-size: 50px;
+    color: #009688;
+}
+
+.layui-input-block {
+    margin-left: 100px;
+} */
+
+#test1 {
+    z-index: 999;
+}
+
+.cover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
