@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/layui/css/layui.css">
+    <link rel="stylesheet" href="/account/account.css">
+    <title>账号信息</title>
+</head>
+
+<body>
+    <div class="layui-card">
+        <div class="layui-card-header">账号信息</div>
+        <div class="layui-card-body">
+            <div class="layui-form-item" id="w_tp">
+                <label class="layui-form-label" id="w_label">
+                  <img src="/assets/backgrounds/w.jpg" alt="" class="w_tx">
+                  <a href="javascript:;" id="picture">更改头像</a>
+                </label>
+                <div class="layui-input-block" id="w_td">
+                    <dl>
+                        <dt>皮卡</dt>
+                        <dd>皮卡丘</dd>
+                    </dl>
+                    <a href="javascript:;" id="w_click">修改</a>
+                </div>
+                <div class="layui-input-block" id="w_form">
+                    <form class="layui-form" id="w_name" lay-filter="formUserInfo">
+                        <div class="layui-form-item" id="w_ipt">
+                            <label class="layui-form-label">名称</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="name" required lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input" id="ipt">
+                            </div>
+                        </div>
+                        <div class="layui-form-item" id="w_put">
+                            <label class="layui-form-label">简介</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="intro" required lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input " id="put">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <div class="layui-input-block">
+                                <button class="layui-btn  layui-btn-normal" lay-submit lay-filter="formDemo">保存</button>
+                                <button type="reset" class="layui-btn layui-btn-primary  layui-btn-primary" id="cancel">取消</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="layui-form-item" id="w_xx">
+                <label class="layui-form-label" id="w_la">账号信息
+                </label>
+                <div class="layui-input-block W_block">
+                    <span class="w_sp">头条号类型</span>个人
+                </div>
+                <div class="layui-input-block">
+                    <span class="w_sp">头条号ID</span>
+                    <span class="w_nl"></span>
+                </div>
+            </div>
+            <div class="layui-form-item" id="w_xx">
+                <label class="layui-form-label" id="w_la">登录方式
+              </label>
+                <div class="layui-input-block ">
+                    <span class="w_sp">绑定手机</span>
+                    <span class="w_tb"></span>
+                </div>
+            </div>
+            <div class="layui-form-item ">
+                <label class="layui-form-label" id="w_la">邮箱
+              </label>
+                <div class="layui-input-block" id="W_bl">
+                    <span class="w_sp">1210@qq.com</span>
+                    <a href="javascript:;" id="W_ck">修改邮箱</a>
+                </div>
+                <div class="layui-input-block" id="w_form2">
+                    <form class="layui-form" id="hls" lay-filter="ltgb">
+                        <div class="layui-form-item" id="w_pit">
+                            <label class="layui-form-label" id="w_em">邮箱</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="email" required lay-verify="required|email" placeholder="请输入标题" autocomplete="off" class="layui-input ppt">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <div class="layui-input-block">
+                                <button class="layui-btn  layui-btn-normal" lay-submit lay-filter="formDemo">保存</button>
+                                <button type="reset" class="layui-btn layui-btn-primary  layui-btn-primary" id="w_ei">取消</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/html" id="w_icon">
+        <div class="w_pp"><img src="" id='w_dd'></div>
+        <input type="file" id="w_file" />
+        <div class='w_ic'><i class="layui-icon layui-icon-add-1 w_io"></i></div>
+    </script>
+    <script src="/assets/layui/layui.all.js"></script>
+    <script src="/scripts/jquery/jquery.js"></script>
+    <script src="/scripts/template-web.js"></script>
+    <script src="/account/account.js"></script>
+</body>
+
+</html>
