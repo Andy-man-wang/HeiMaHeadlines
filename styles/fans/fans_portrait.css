@@ -1,0 +1,54 @@
+body,html {
+  margin: 0;
+  padding: 0;
+ 
+}
+body {
+  padding: 15px;
+  background-color: #f2f3f5;
+}
+.head .fl {
+  float: left;
+
+}
+.head .fr {
+  float:right;
+}
+.head span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #69B4FF;
+  vertical-align: middle;
+  margin: 4px;
+}
+.layui-card {
+  overflow: hidden;
+}
+.layui-progress {
+  margin-top: 50px;
+  height: 25px;
+}
+.layui-bg-blue {
+  height: 25px!important;
+  line-height: 25px;
+}
+.table {
+  position: relative;
+  border: 1px solid #f2f3f5;
+  overflow: hidden;
+
+}
+/* #main {
+  float: left;
+} */
+.table1 {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 380px;
+  height: 100%;
+  border-left: 1px solid #f2f3f5;
+  
+}

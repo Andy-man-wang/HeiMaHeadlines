@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>layout 后台大布局 - Layui</title>
   <link rel="stylesheet" href="/assets/layui/css/layui.css">
+  <link rel="stylesheet" href="../assets/font_albb/iconfont.css">
   <link rel="stylesheet" href="/styles/index.css">
 </head>
 
@@ -16,10 +17,10 @@
         <img src="/assets/logo.png" alt="">
       </div>
       <!-- 头部区域（可配合layui已有的水平导航） -->
-      <ul class="layui-nav layui-layout-left">
+      <ul class="layui-nav layui-layout-left " >
         <li class="layui-nav-item"><a href="">江苏传智播客科技教育有限公司</a></li>
       </ul>
-      <ul class="layui-nav layui-layout-right">
+      <ul class="layui-nav layui-layout-right" >
         <li class="layui-nav-item">
           <a href="javascript:;">
             <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
@@ -37,28 +38,27 @@
     <div class="layui-side layui-bg-black">
       <div class="layui-side-scroll">
         <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
-        <ul class="layui-nav layui-nav-tree"  lay-filter="test">
-          <li class="layui-nav-item"><a href="">首页</a></li>
+        <ul class="layui-nav layui-nav-tree"  lay-filter="test" lay-shrink="all">
+          <li class="layui-nav-item layui-this"><a href="./dashboard.html" target="hmtop"><i class="layui-icon layui-icon-home"></i>首页</a></li>
           <li class="layui-nav-item ">
-            <a class="" href="javascript:;">内容管理</a>
+            <a class="" href="javascript:;"><i class="layui-icon layui-icon-star"></i>内容管理</a>
             <dl class="layui-nav-child">
-              <dd><a href="javascript:;">发布文章</a></dd>
-              <dd><a href="javascript:;">内容列表</a></dd>
-              <dd><a href="javascript:;">评论列表</a></dd>
-              <dd><a href="javascript:;">素材管理</a></dd>
+              <dd><a href="javascript:;"><i class="iconfont icon-daiyanshou"></i>发布文章</a></dd>
+              <dd><a href="javascript:;"><i class="iconfont icon-daiban2"></i>内容列表</a></dd>
+              <dd><a href="javascript:;"><i class="iconfont icon-daibandengdaishenhe"></i>评论列表</a></dd>
+              <dd><a href="javascript:;"><i class="iconfont icon-caidanguanli3"></i>素材管理</a></dd>
               
             </dl>
           </li>
           <li class="layui-nav-item">
-            <a href="javascript:;">粉丝管理</a>
+            <a href="javascript:;"><i class="layui-icon layui-icon-user"></i>粉丝管理</a>
             <dl class="layui-nav-child">
-              <dd><a href="javascript:;">图文数据</a></dd>
-              <dd><a href="javascript:;">粉丝概况</a></dd>
-              <dd><a href="">粉丝画像</a></dd>
-              <dd><a href="">粉丝列表</a></dd>
+              <dd><a href="./fans/fans_profile.html" target="hmtop"><i class="iconfont icon-pingshenzhuanjiaguanli"></i>粉丝概况</a></dd>
+              <dd><a href="./fans/fans_portrait.html" target="hmtop"><i class="iconfont icon-pingshenzhuanjiaguanli"></i>粉丝画像</a></dd>
+              
             </dl>
           </li>
-          <li class="layui-nav-item"><a href="">账户信息</a></li>
+          <li class="layui-nav-item"><a href=""><i class="layui-icon layui-icon-reply-fill"></i>账户信息</a></li>
         </ul>
       </div>
     </div>
