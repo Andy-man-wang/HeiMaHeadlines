@@ -66,7 +66,19 @@ body {
     padding-right: 10px;
 }
 
+.articles .newImg {
+    float: left;
+    width: 150px;
+    height: 72px;
+    padding-right: 10px;
+}
+
 .article .list {
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.articles .list {
     padding: 15px;
     border-bottom: 1px solid #ccc;
 }
@@ -75,7 +87,16 @@ body {
     border-bottom: none;
 }
 
+.articles .list:last-child {
+    border-bottom: none;
+}
+
 .article .time {
+    font-size: 12px;
+    color: #999;
+}
+
+.articles .time {
     font-size: 12px;
     color: #999;
 }
@@ -84,7 +105,16 @@ body {
     color: #3296FA;
 }
 
+.articles .state {
+    color: #3296FA;
+}
+
 .article .tuijian {
+    font-size: 12px;
+    color: #999;
+}
+
+.articles .tuijian {
     font-size: 12px;
     color: #999;
 }

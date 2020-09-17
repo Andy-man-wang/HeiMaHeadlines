@@ -71,15 +71,25 @@
                         <a href="javascript:;" id="w_more"> 更多</a>
                     </div>
                     <div class="layui-card-body">
-                        <ul class="article">
-                            <!-- <li>
-                            <img src="/assets/backgrounds/w.jpg" class="newImg">
-                            <dl>
-                                <dt>黑马头条官方账号</dd>
-                            <dd class="time"> <span class="state" >已发表</span> 2020-9-16 </dd>
-                            <dd class="tuijian">推荐 6 阅读 29 评论 0 转发 0 收藏 6 </dd>
-                           </dl>
-                      </li> -->
+                        <ul class="articles">
+                            <li class='list'>
+                                <img src="/assets/backgrounds/1.jpg" class="newImg">
+                                <dl>
+                                    <dt>黑马头条官方账号</dt>
+                                    <dd class="time"> <span class="state">已发表</span> 2020-9-16 </dd>
+                                    <dd class="tuijian">推荐 6 阅读 29 评论 0 转发 0 收藏 6 </dd>
+                                </dl>
+                            </li>
+                        </ul>
+                        <ul class="articles">
+                            <li class='list'>
+                                <img src="/assets/backgrounds/2.jpg" class="newImg">
+                                <dl>
+                                    <dt>黑马头条官方账号</dt>
+                                    <dd class="time"> <span class="state">已发表</span> 2020-9-16 </dd>
+                                    <dd class="tuijian">推荐 6 阅读 29 评论 0 转发 0 收藏 6 </dd>
+                                </dl>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -144,11 +154,11 @@
             </div>
         </div>
         <script type="text/html" id="newArt">
-            {{each data}}
+            {{each data.results}}
             <li class='list'>
                 <img src="/assets/backgrounds/w.jpg" class="newImg">
                 <dl>
-                    <dt>黑马头条官方账号</dt>
+                    <dt>{{$value.title}}</dt>
                     <dd class="time"> <span class="state">已发表</span> 2020-9-16 </dd>
                     <dd class="tuijian">推荐 6 阅读 29 评论 0 转发 0 收藏 6 </dd>
                 </dl>
