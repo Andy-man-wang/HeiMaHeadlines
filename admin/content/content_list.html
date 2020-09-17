@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/layui/css/layui.css">
+    <link rel="stylesheet" href="/styles/content/content_list.css">
+</head>
+
+<body>
+    <div class="layui-card">
+        <div class="layui-card-header">
+            首页
+            <i class="layui-icon layui-icon-right"></i>
+            内容管理</div>
+        <div class="layui-card-body">
+            <form class="layui-form" action="" id="sizer">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">状态：</label>
+                    <div class="layui-input-block">
+                        <input type="radio" name="radio" value="" title="全部" lay-filter="ridio" checked>
+                        <input type="radio" name="radio" value="0" title="草稿" lay-filter="ridio">
+                        <input type="radio" name="radio" value="1" title="待审核" lay-filter="ridio">
+                        <input type="radio" name="radio" value="2" title="审核通过" lay-filter="ridio">
+                        <input type="radio" name="radio" value="3" title="审核失败" lay-filter="ridio">
+                        <input type="radio" name="radio" value="4" title="已删除" lay-filter="ridio">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">频道：</label>
+                    <div class="layui-input-block" class="xiala">
+                        <select name="city" lay-verify="" lay-search lay-filter="filter">
+                            <!-- <option value="010" selected>请选择</option>
+                            <option value="021">form</option>
+                            <option value="0571">layim</option> -->
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">日期：</label>
+                    <div class="layui-input-block">
+                        <input type="text" id="test1" name="pubdate" placeholder="开始时间 至 结束时间">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn layui-btn-sm layui-btn-normal" lay-submit
+                            lay-filter="formDemo">筛选</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="layui-card">
+        <div class="layui-card-header">根据筛选条件共查询到 <span id="jieguo"></span> 条结果：</div>
+        <div class="layui-card-body">
+            <table class="layui-table" lay-skin="line">
+                <colgroup>
+                    <col width="280">
+                    <col width="280">
+                    <col width="280">
+                    <col width="280">
+                    <col width="120">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>封面</th>
+                        <th>标题</th>
+                        <th>状态</th>
+                        <th>发布时间</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- <tr>
+                        <td>
+                            <div class="img">
+                                <img src="" alt="">
+                            </div>
+                        </td>
+                        <td>今天学习很快乐</td>
+                        <td>
+                            <span class="audit">
+                                审核通过
+                            </span>
+                        </td>
+                        <td>2020-09-15 23:14:33</td>
+                        <td>
+                            <button class="btnicon">
+                                <i class="layui-icon layui-icon-edit" style="font-size: 30px; color: #409EFF;"></i>
+                            </button>
+                            <button class="btnicon">
+                                <i class="layui-icon layui-icon-delete" style="font-size: 30px; color: #409EFF;"></i>
+                            </button>
+
+                        </td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+        <!-- 分页器 -->
+        <div id="pageBox"></div>
+    </div>
+
+
+
+
+    <!-- 渲染列表模板 -->
+    <script type="text/html" id="text_list">
+        {{each results}}
+        <tr>
+            <td>
+                <div class="img">
+                    <img src={{$value.cover.images|coverimages}}>
+                </div>
+            </td>
+            <td>
+                {{$value.title}}
+            </td>
+            <td>
+                <span class="audit">
+                    {{$value.status|shenhe}}
+                </span>
+            </td>
+            <td>
+                {{$value.pubdate}}
+            </td>
+            <td>
+                <button type="button" class="btnicon1" data-id={{$value.id}}>
+                    <i class="layui-icon layui-icon-edit" style="font-size: 30px; color: #409EFF;"></i>
+                </button>
+                <button type="button" class="btnicon2" data-id={{$value.id}}>
+                    <i class="layui-icon layui-icon-delete" style="font-size: 30px; color: #409EFF;"></i>
+                </button>   
+            </td>
+        </tr>
+        {{/each}}
+    </script>
+
+    <!-- 渲染频道列表 -->
+    <script type="text/html" id="pindao">
+        <option name="name" selected>请选择</option>
+        {{each channels}}
+        <option value={{$value.id}}>{{$value.name}}</option>
+        {{/each}}
+    </script>
+
+    <script src="/assets/layui/layui.all.js"></script>
+    <script src="/scripts/jquery/jquery.js"></script>
+    <script src="/assets/laydate/laydate.js"></script>
+    <script src="/scripts/template-web.js"></script>
+    <script src="/scripts/content/content_list.js"></script>
+</body>
+
+</html>

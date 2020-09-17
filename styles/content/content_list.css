@@ -1,0 +1,64 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 15px;
+  background-color: #f2f3f5;
+}
+
+.layui-card {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);
+}
+
+.layui-form-select {
+  width: 215px;
+}
+
+#test1 {
+  height: 32px;
+}
+
+.audit {
+  display: inline-block;
+  height: 32px;
+  line-height: 32px;
+  font-size: 12px;
+  padding: 0 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #f0f9eb;
+  border-color: #e1f3d8;
+  color: #67c23a;
+}
+
+.btnicon1,
+.btnicon2 {
+  outline: none;
+  border-radius: 50%;
+  border: 0;
+  cursor: pointer;
+}
+
+.btnicon1:hover,
+.btnicon2:hover {
+  background-color: #fff;
+}
+
+.img {
+  width: 250px;
+  height: 100px;
+}
+
+.img img {
+  width: 100%;
+  height: 100%;
+}
+
+#pageBox {
+  text-align: center;
+}
