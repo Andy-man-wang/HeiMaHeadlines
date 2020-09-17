@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>素材管理</title>
+    <link rel="stylesheet" href="/assets/layui/css/layui.css">
+    <link rel="stylesheet" href="/styles/content/materialMg.css">
+</head>
+
+<body>
+    <div class="layui-card">
+        <div class="layui-card-header">图片管理</div>
+        <div class="layui-card-body">
+            <div class="layui-btn-group">
+                <button type="button" id="allPicBtn" class="layui-btn layui-btn-normal">全部</button>
+                <button type="button" id="collect-btn" class="layui-btn layui-btn-primary">收藏</button>
+            </div>
+            <button type="button" class="layui-btn layui-btn-normal" id="upload-pic-btn">上传图片</button>
+            <input type="file" id="file-pic-ipt" accept="image/png, image/jpeg">
+
+            <!-- 图片区域 -->
+            <div class="layui-container" id="material-cont">
+            </div>
+
+            <!-- 分页区域 -->
+            <div id="renderPage"></div>
+        </div>
+    </div>
+    
+
+    <!-- 自己创建一个图片模板 -->
+    <script type="text/html" id="material-pic">
+        {{each results}}
+        <div class="layui-col-md2">
+            <div class="layui-col-md2-box">
+                <img class="layui-col-md2-pic" src="{{$value.url}}" alt="">
+                <div class="operate">
+                    <img class="operate-left" data-id={{$value.id}} src="" collect='{{$value.is_collected}}' alt="">
+                    <img class="operate-right" data-id={{$value.id}} src="/images/delete.png" alt="">
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </script>
+
+    <!-- 收藏图片模板 -->
+    <script type="text/html" id="collect-pic">
+        {{each results}}
+            <div class="layui-col-md2">
+                <div data-id={{$value.id}} class="layui-col-md2-box">
+                    <img class="layui-col-md2-pic" src="{{$value.url}}" alt="">
+                </div>
+            </div>
+        {{/each}}
+    </script>
+
+    <script src="/scripts/jquery/jquery.js"></script>
+    <script src="/assets/layui/layui.all.js"></script>
+    <script src="/scripts/template-web.js"></script>
+    <script src="/scripts/baseApi/baseAPI.js"></script>
+    <script src="/scripts/content/materialMg.js"></script>
+</body>
+
+</html>
