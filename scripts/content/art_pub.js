@@ -4,23 +4,24 @@ $(function() {
         // 初始化富文本编辑器
     initEditor()
     initCate()
-        //
-        // $('#pic').on('click', function() {
-        //     layer.open({
-        //         type: 1,
-        //         area: ['800px', '800px'],
-        //         title: false,
-        //         shadeClose: true,
-        //         content: $('#dialog-add').html()
-        //     })
-        // })
     var query = {
-            type: 1,
-            images: []
-        }
-        // $('body').on('click', '#chooseFirst', function() {
-        //         $('#file').click()
-        //     })
+        type: 1,
+        images: []
+    }
+
+    //
+    // $('#pic').on('click', function() {
+    //     layer.open({
+    //         type: 1,
+    //         area: ['500px', '500px'],
+    //         title: false,
+    //         shadeClose: true,
+    //         content: $('#dialog-add').html()
+    //     })
+    // })
+    // $('body').on('click', '#chooseFirst', function() {
+    //         $('#file').click()
+    //     })
 
     // 通过代理的形式，为 form-add 表单绑定 submit 事件  
     // $('body').on('change', '#file', function(e) {
@@ -41,56 +42,57 @@ $(function() {
     //                 if (res.message !== 'OK') {
     //                     return layer.msg('上传失败')
     //                 }
-    //                 query.images.push(res.data.url)
+    //                 $('.cover').prop('src', res.data.url)
+
     //             }
     //         })
     //     })
 
 
-
+    // 为添加类别按钮绑定点击事件
+    // var indexAdd = null
+    // $('#btnAddCate').on('click', function() {
+    //     indexAdd = layer.open({
+    //         type: 1,
+    //         area: ['500px', '250px'],
+    //         title: '添加文章分类',
+    //         content: $('#dialog-add').html()
+    //     })
+    // })
     //不加弹出层
     $('#test1').on('click', function() {
         $('#filter').click()
     })
     $('#filter').on('change', function(e) {
-            // e.preventDefault()
-            console.log(e.target);
+        // e.preventDefault()
+        console.log(e.target);
 
-            var imgFiles = e.target.files[0]
-            var imgfd = new FormData()
-            imgfd.append('image', imgFiles)
-            $.ajax({
-                method: 'POST',
-                url: 'http://ttapi.research.itcast.cn/mp/v1_0/user/images',
-                contentType: false,
-                processData: false,
-                data: imgfd,
-                headers: {
-                    Authorization: 'Bearer ' + localStorage.getItem('hmtoken')
-                },
-                success: function(res) {
-                    console.log(res);
+        var imgFiles = e.target.files[0]
+        var imgfd = new FormData()
+        imgfd.append('image', imgFiles)
+        $.ajax({
+            method: 'POST',
+            url: 'http://ttapi.research.itcast.cn/mp/v1_0/user/images',
+            contentType: false,
+            processData: false,
+            data: imgfd,
+            headers: {
+                Authorization: 'Bearer ' + localStorage.getItem('hmtoken')
+            },
+            success: function(res) {
+                console.log(res);
 
-                    if (res.message !== 'OK') {
-                        return layer.msg('上传失败')
-                    }
-                    layer.msg('上传成功')
-                        // console.log(123);
-                        // query.images.push(res.data.url)
-                    $('.cover').prop('src', res.data.url)
+                if (res.message !== 'OK') {
+                    return layer.msg('上传失败')
                 }
-            })
-        })
-        // 为添加类别按钮绑定点击事件
-    var indexAdd = null
-    $('#btnAddCate').on('click', function() {
-        indexAdd = layer.open({
-            type: 1,
-            area: ['500px', '250px'],
-            title: '添加文章分类',
-            content: $('#dialog-add').html()
+                layer.msg('上传成功')
+                    // console.log(123);
+                    // query.images.push(res.data.url)
+                $('.cover').prop('src', res.data.url)
+            }
         })
     })
+
 
 
     // 获取下拉频道 渲染数据
