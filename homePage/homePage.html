@@ -156,7 +156,7 @@
         <script type="text/html" id="newArt">
             {{each data.results}}
             <li class='list'>
-                <img src="/assets/backgrounds/w.jpg" class="newImg">
+                <img src="{{$value.cover.images[0]}}" class="newImg">
                 <dl>
                     <dt>{{$value.title}}</dt>
                     <dd class="time"> <span class="state">已发表</span> 2020-9-16 </dd>
