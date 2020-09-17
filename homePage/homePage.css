@@ -1,0 +1,124 @@
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #f2f3f5;
+    padding: 15px;
+}
+
+.w_dd {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    float: left;
+}
+
+.w_dd img {
+    width: 100%;
+    height: 100%;
+}
+
+.w_dt {
+    margin: 4px 0 4px 60px;
+}
+
+.w_db {
+    margin: 4px 0 4px 60px;
+}
+
+.w_de {
+    float: right;
+    margin-right: -150px;
+}
+
+.w_df {
+    display: inline-block;
+    text-align: center;
+    border-right: 1px solid #eee;
+    padding: 0 20px;
+}
+
+.w_dy {
+    margin-left: -80px;
+}
+
+.w_do {
+    font-size: 16px;
+}
+
+.w_dq {
+    color: #999;
+    font-size: 12px;
+}
+
+.w_de .w_df:last-child {
+    border: none;
+}
+
+.article .newImg {
+    float: left;
+    width: 150px;
+    height: 72px;
+    padding-right: 10px;
+}
+
+.articles .newImg {
+    float: left;
+    width: 150px;
+    height: 72px;
+    padding-right: 10px;
+}
+
+.article .list {
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.articles .list {
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.article .list:last-child {
+    border-bottom: none;
+}
+
+.articles .list:last-child {
+    border-bottom: none;
+}
+
+.article .time {
+    font-size: 12px;
+    color: #999;
+}
+
+.articles .time {
+    font-size: 12px;
+    color: #999;
+}
+
+.article .state {
+    color: #3296FA;
+}
+
+.articles .state {
+    color: #3296FA;
+}
+
+.article .tuijian {
+    font-size: 12px;
+    color: #999;
+}
+
+.articles .tuijian {
+    font-size: 12px;
+    color: #999;
+}
+
+#w_more {
+    float: right;
+}
